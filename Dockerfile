@@ -11,7 +11,7 @@ RUN apk add --update --no-cache libxi \
 	ttf-dejavu && \
   	rm -rf /tmp/* /var/cache/apk/*
 RUN mkdir -p $HOME && \
-	wget https://raw.githubusercontent.com/JairoQuispe/docker-megabasterd-app/master/MegaBasterdALL_PLATFORMS_2.11.jar -O /home/Megabasterd.jar && \
+	wget https://github.com/tonikelope/megabasterd/releases/download/v7.42/MegaBasterd_7.42.jar -O /home/Megabasterd.jar && \
 	chmod 777 /home/Megabasterd.jar && chown -R 1000:1000 /home
 WORKDIR $HOME
 ENTRYPOINT ["java","-jar"]
